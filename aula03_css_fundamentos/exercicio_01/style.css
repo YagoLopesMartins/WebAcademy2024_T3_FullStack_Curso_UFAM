@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body{
+    background-color: white;
+}
+div#text{
+    background-color: gray;
+    height: 4%;
+    border: 10px black solid;
+    
+    border-top-left-radius: 16px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 16px;
+    padding: 20px;
+}
+
