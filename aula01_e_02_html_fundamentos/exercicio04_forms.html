@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Fomulário de Contato</h1>
+    <p>Por favor, preencha o formulário abaixo e clique no botão Enviar Mensagem. Agradecemos por seu contato.</p>
+
+    <form action="" method="">
+        <fieldset>
+            <legend>Dados Básicos</legend>
+            Nome<input type="text" placeholder="Nome"><br/>
+            E-mail<input type="text" placeholder="seunome@dominio.com.br"><br/>
+            Website<input type="text" placeholder="http://"><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Seu curso no Instituro de Computação</legend>
+                <input type="radio" name="curso" id="cCiencia"><label for="cCiencia">Ciência da Computação</label><br/>
+                <input type="radio" name="curso" id="cSistema"><label for="cSistema">Sistemas de Informação</label><br/>
+                <input type="radio" name="curso" id="cEngeharia"><label for="cEngeharia">Engenharia da Computação</label><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Assinale as linguagens já usadas por você:</legend>
+            <input type="checkbox" name="tJava" id="cJava"><label for="cJava">Java</label>
+            <input type="checkbox" name="tC" id="cC"><label for="cC">C</label>
+            <input type="checkbox" name="tC++" id="cC++"><label for="cC++">C++</label>
+            <input type="checkbox" name="tPerl" id="cPerl"><label for="cPerl">Perl</label>
+            <input type="checkbox" name="tPython" id="cPython"><label for="cPython">Python</label>
+            <input type="checkbox" name="tJS" id="cJS"><label for="cJS">Javascript</label><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Dados Complementares</legend>
+            Cor Favorita <input type="color"><br/>
+            Data de Nascimento<input type="date"><br/>
+            Ano de entrada em seu curso no Icomp<input type="number" placeholder="2000"><br/>
+            Nota para este site <input type="range"><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Área de atuação</legend>
+            <select name="" id="">
+                <option value="Banco de Dados">Banco de Dados</option>
+                <option value="Banco de Dados II">Banco de Dados II</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Submeta seu curriculo vitae</legend>
+            <input type="file"><br/><br/>
+        </fieldset>
+        <fieldset>
+            <legend>Digite sua mensagem</legend>
+            <textarea name="" id="" cols="30" rows="4">Este é o vaor padrão!</textarea><br/><br/>
+        </fieldset>
+        <button type="submit">Resetar Dados</button>
+        <button type="submit">Enviar Mensagem</button>
+    </form>
+
+</body>
+</html>
