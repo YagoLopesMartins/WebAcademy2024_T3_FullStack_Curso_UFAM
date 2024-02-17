@@ -1,0 +1,33 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-areas:
+    "head head head head head"
+    "nav main main main ads"
+    "foot foot foot foot foot";
+    gap: 8px;
+    background-color: gray;
+    justify-items: center;
+}
+
+.container header {
+    grid-area: header;
+    background-color: yellow;
+}
+.container nav {
+    grid-area: nav;
+    background-color: yellow;   
+}
+.container aside {
+    grid-area: ads;
+    background-color: yellow;
+}
+.container main {
+    grid-area: main;
+    background-color: yellow;
+}
+.container footer {
+    grid-area: footer;
+    background-color: yellow;
+}

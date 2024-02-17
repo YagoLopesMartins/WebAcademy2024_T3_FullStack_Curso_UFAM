@@ -1,8 +1,20 @@
 body{
-    
     background-image: url(./../img/i612620.webp);
-  
 }
 div#principal{  
-   /* background-position: 500px 500px; */
+    border: 10px solid orange;
+    border-radius: 16px 16px 16px 16px;
+    background-color: black;
+    background-size: 40px;
+    background-repeat: repeat-x;
+    width: 260px;
+    height: 450px; 
+    color: white;
+    text-align: center;
 }
+
+div#principal h2 {
+    color: white;
+}
+
+
