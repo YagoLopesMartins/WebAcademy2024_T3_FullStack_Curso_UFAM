@@ -1,0 +1,85 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  
+    <ul class="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-2">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-3">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-4">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+    <button id="add">Adicionar estilos</button>
+    <button id="clean">Remover estilos</button>
+
+    <script>
+        // Pratica01: imprima no console todos os itens da lista-itens-2
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2');
+
+        lista_itens_2.forEach((item) => {
+            console.log(item);
+        });
+
+        // Pratica01: imprima no console somente os itens da lista-itens-2 que possuam a classe 'hot'
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2 .hot');
+        console.log(lista_itens_2);
+
+
+         // Pratica02: Percorra todos os itens da lista-itens-2 e altere o estilo de cor do background para "orange"
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2');
+
+        lista_itens_2.forEach((item) => {
+            console.log("Pratica 02: " +item);
+            item.style.setProperty("background-color", "orange")
+        });
+
+        /* Pratica02: Percorra todos os itens da lista-itens-2, remova a classe "hot", se existir, e
+            adicione uma nova classe "cold". Outra opção é percorrer os elementos e
+            substituir diretamente a class "hot" por "cold" */
+
+            var lista_itens_2 = document.querySelectorAll('.lista-itens-2 li');
+
+            lista_itens_2.forEach(function(item){
+           
+                // Primeira forma para resolver o problema
+                // if(item.classList.contains('hot')) {
+                //     item.classList.remove('hot')
+                //     item.classList.add('cold')
+                // }
+                // Segunda forma para resolver o problema
+                if(item.classList.contains('hot')) {
+                    item.classList.replace('hot','cold')
+                }
+            });
+
+        let element = document.getElementById("id");
+        
+        document.getElementById("add").onclick = function () {
+            element.style.setProperty("background-color", "blue")
+        }
+        document.getElementById("clean").onclick = function () {
+            element.style.removeProperty("background-color")
+        }
+    </script>
+  </body>

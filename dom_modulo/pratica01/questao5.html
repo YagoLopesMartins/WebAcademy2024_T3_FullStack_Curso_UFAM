@@ -1,0 +1,65 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  
+    <ul class="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-2">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-3">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-4">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+    <button id="add">Adicionar estilos</button>
+    <button id="clean">Remover estilos</button>
+
+    <script>
+
+         // Questão 5: Pratica02: i) Percorra todos os itens da lista-itens-2 e altere o estilo de cor do background para "orange"
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2');
+
+        lista_itens_2.forEach((item) => {
+            item.style.setProperty("background-color", "orange")
+        });
+
+        /* Questão 5: Pratica02: ii) Percorra todos os itens da lista-itens-2, remova a classe "hot", se existir, e
+            adicione uma nova classe "cold". Outra opção é percorrer os elementos e
+            substituir diretamente a class "hot" por "cold" */
+
+            var lista_itens_2 = document.querySelectorAll('.lista-itens-2 li');
+
+            lista_itens_2.forEach(function(item){
+                /* Para este problema, utilizei duas formas para alcançar o objetivo, 
+                   basta apenas descomentar o trecho de codigo da Primeira forma */
+                // Primeira forma para resolver o problema
+                // if(item.classList.contains('hot')) {
+                //     item.classList.remove('hot')
+                //     item.classList.add('cold')
+                // }
+                // Segunda forma para resolver o problema
+                if(item.classList.contains('hot')) {
+                    item.classList.replace('hot','cold')
+                }
+            });
+    </script>
+  </body>

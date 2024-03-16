@@ -1,0 +1,48 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <p id="lista-titulo" name="lista">Lista de itens:</p>
+  
+    <ul class="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-2">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-3">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  
+    <ul class="lista-itens-4">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+    <button id="add">Adicionar estilos</button>
+    <button id="clean">Remover estilos</button>
+
+    <script>
+        // Questão 04: Pratica01: i) imprima no console todos os itens da lista-itens-2
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2');
+
+        lista_itens_2.forEach((item) => {
+            console.log(item);
+        });
+
+        // Questão 04: Pratica01: ii) imprima no console somente os itens da lista-itens-2 que possuam a classe 'hot'
+        var lista_itens_2 = document.querySelectorAll('.lista-itens-2 .hot');
+        console.log(lista_itens_2);
+    </script>
+  </body>
