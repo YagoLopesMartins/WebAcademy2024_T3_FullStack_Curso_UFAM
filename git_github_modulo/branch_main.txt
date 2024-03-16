@@ -1,0 +1,40 @@
+
+Web Academy 
+Controle de Versão
+
+Laboratório - Aula 01
+
+
+Objetivo do Laboratório: Primeiro contato com o Git e GitHub, uso de comandos básicos e branches.
+
+
+Pré-Requisitos:
+Ter uma conta no GitHub
+Máquina com Linux / Windows instalado e Git já configurado com a conta do GitHub
+
+
+PASSOS
+
+Crie um projeto para prática do git
+Inicialize o repositório local 
+Crie um repositório remoto no GitHub
+Integre o repositório local com o remoto
+Adicione arquivos (pode ser .txt) no repositório local
+Adicione todos no stage
+Faça o commit
+Faça o push para enviar para o repositório remoto
+Crie um arquivo no repositório remoto diretamente pela página do repositório
+Faça o pull no repositório local para receber o arquivo criado no repositório remoto
+Crie uma branch no repositório local
+Mude para a branch recém criada
+Adicione na nova branch (passo 8) um arquivo novo e também edite (ou adicione conteúdo) um dos arquivos já criados originalmente na main.
+Sincronize o repositório remoto com a nova branch (passo 8) 
+No repositório remoto, edite o conteúdo de um dos arquivos da branch main.
+No repositório local, atualize a branch recém criada (passo 8) com a modificação que foi realizada na branch main no repositório remoto.
+No repositório local, edite um arquivo da branch criada no passo 8.
+Na main local, faça o merge com a branch criada no passo 8.
+Sincronize  a main “mergeada” para o repositório remoto.
+
+
+_________________________________________________________________________________
+
