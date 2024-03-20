@@ -1,0 +1,26 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <div>
+      <p id="lista-titulo" name="lista">Lista de itens:</p>
+    </div>
+  
+    <ul id="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  </body>
+
+  <script>
+    // Pratica 03: i) Adicione um novo elemento item na lista com id="lista-itens-1"
+    ul_lista_itens_1 = document.getElementById('lista-itens-1');
+
+    let text = document.createTextNode('item e')
+    let novo_li = document.createElement('li')
+    novo_li.appendChild(text)
+
+    ul_lista_itens_1.appendChild(novo_li)
+ 
+  </script>
