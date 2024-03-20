@@ -1,0 +1,35 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <div>
+      <p id="lista-titulo" name="lista">Lista de itens:</p>
+    </div>
+  
+    <ul id="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  </body>
+
+  <script>
+    ul_lista_itens_1 = document.getElementById('lista-itens-1');
+
+    // Pratica 01: i) Imprima no console o primeiro e último filho da lista 1
+    console.log(ul_lista_itens_1.firstChild);
+    // Pratica 01: i) Imprima no console o primeiro e último filho da lista 1
+    console.log(ul_lista_itens_1.lastChild);
+    // Pratica 01: ii) Imprima no console o elemento HTML pai da lista 1;
+    console.log(ul_lista_itens_1.parentNode);
+    
+    // Pratica 01: iii) Imprima no console todos os filhos da lista 1;
+    console.log(ul_lista_itens_1.childNodes);
+
+    // Pratica 01: iv) Imprima no console os irmãos do item com id = 'two'
+    li_id_two = document.getElementById('two');
+    console.log(li_id_two.previousElementSibling);
+    console.log(li_id_two.nextElementSibling);
+
+
+  </script>
