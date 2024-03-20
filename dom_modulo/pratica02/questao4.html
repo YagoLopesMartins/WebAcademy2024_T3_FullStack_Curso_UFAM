@@ -1,0 +1,20 @@
+<body>
+    <h1>Várias listas</h1>
+  
+    <div>
+      <p id="lista-titulo" name="lista">Lista de itens:</p>
+    </div>
+  
+    <ul id="lista-itens-1">
+      <li id="one" class="hot">item a</li>
+      <li id="two" class="hot">item b</li>
+      <li id="three" class="hot">item c</li>
+      <li id="four">item d</li>
+    </ul>
+  </body>
+
+  <script>
+    // Pratica 04: i) Remova o último elemento item de lista
+    ul_lista_itens_1 = document.getElementById('lista-itens-1');
+    ul_lista_itens_1.removeChild(ul_lista_itens_1.lastElementChild)
+  </script>
