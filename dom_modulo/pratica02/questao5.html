@@ -1,0 +1,71 @@
+<body>
+  <h1>To-do</h1>
+
+  <div>
+    <p id="lista-titulo" name="lista">Lista de atividades:</p>
+  </div>
+
+  <div>
+  <input id="item_add" placeholder="Digite aqui o item" />
+    <div id="feedback"></div>
+    <button id="Add">Adicionar</button>
+  </div>
+
+  <ul id="lista-itens">
+    <li>item a</li>
+  </ul>
+
+  <div>
+    <button id="Clean">Remover último item</button>
+  </div>
+</body>
+
+  <script>
+    /* Pratica 05: a)  Implementar funcionalidade de adicionar novo item à lista, de forma
+        dinâmica, a partir do campo de <input> e botão de “adicionar” - 2,0 pontos */
+    // i) Considerar que não é permitido adicionar itens vazios, ou seja, com string vazia ' '.
+    // ii) Necessário verificar como recuperar o conteúdo de um campo “input”.
+
+        let input = document.getElementById('item_add');
+        input.addEventListener('blur', checkInputSize)
+
+        function checkInputSize(){
+          let msg = document.getElementById('feedback')
+          if (this.value.length < 1 ){
+            msg.textContent = 'Item precisa ter no minimo 1 caractere. Por favor, digite algo .no campo de input ...'
+            msg.style.cssText = "color:red"
+          }else{
+            msg.textContent = ''
+          }
+        }
+
+        let ul_lista_itens_1 = document.getElementById('lista-itens');
+        
+        
+        
+        document.getElementById("Add").onclick = function () {
+          if(input.value.length < 1){
+            alert("Item precisa ter no minimo 1 caractere. Por favor, digite algo no campo de input :)");
+          }else{
+            let text = document.createTextNode(`${input.value} (item criado com sucesso)`)
+            let novo_li = document.createElement('li')
+            novo_li.appendChild(text)
+
+            ul_lista_itens_1.appendChild(novo_li)
+          }
+        }
+        /* Pratica 05: b)  Implementar funcionalidade de remover último item da lista, de forma
+        dinâmica, a partir do botão de “remover último item” - 2,0 pontos */
+        // i) Considerar que essa funcionalidade só faz sentido caso haja pelo menos um (1) elemento presente na lista de itens.
+
+        document.getElementById("Clean").onclick = function () {
+          let tamnhoLista = ul_lista_itens_1.getElementsByTagName('li').length;
+          console.log(tamnhoLista)
+          if(tamnhoLista < 1){
+            alert("Nenhum item de lista existente para ser removido :)");
+          }else{
+            ul_lista_itens_1.removeChild(ul_lista_itens_1.lastElementChild)
+          }
+        }
+
+  </script>
