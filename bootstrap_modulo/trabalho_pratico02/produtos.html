@@ -51,7 +51,7 @@
   </div>
   <div class="row">
     <div class="col text-end">
-      <button class="btn btn-primary">Novo Produto</button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#cadastroProduto">Novo Produto</button>
     </div>
   </div>
     
@@ -76,59 +76,57 @@
                 <td>102</td>
                 <td colspan="2">
                   <button class="btn btn-info" type="button">Editar</button>
-                  <button class="btn btn-danger" type="button">Excluir</button>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
               <tr>
-                <th scope="row">1</th>
-                <td>ACaixa de marcha</td>
+                <th scope="row">2</th>
+                <td>Caixa de marcha</td>
                 <td>R$ 2.099</td>
                 <td>55</td>
                 <td colspan="2">
                   <button class="btn btn-info" type="button">Editar</button>
-                  <button class="btn btn-danger" type="button">Excluir</button>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">3</th>
                 <td>Pastilhas de freios</td>
                 <td>R$ 122</td>
                 <td>1050</td>
                 <td colspan="2">
                   <button class="btn btn-info" type="button">Editar</button>
-                  <button class="btn btn-danger" type="button">Excluir</button>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">4</th>
                 <td>Retrovisor dianteiro</td>
                 <td>R$ 205</td>
                 <td>2</td>
                 <td colspan="2">
                   <button class="btn btn-info" type="button">Editar</button>
-                  <button class="btn btn-danger" type="button">Excluir</button>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">5</th>
                 <td>Parabrisas</td>
                 <td>R$ 679</td>
                 <td>29</td>
                 <td colspan="2">
                   <button class="btn btn-info" type="button">Editar</button>
-                  <button class="btn btn-danger" type="button">Excluir</button>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
               <tr>
-                <th scope="row">1</th>
+                <th scope="row">6</th>
                 <td>Pneu para aro 19</td>
                 <td>R$ 354</td>
                 <td class="red-text">0</td>
                 <td>
                   <button class="btn btn-info" type="button">Editar</button>
-                  <a href="" data-target="#modal-delete" data-toggle="modal">
-                    <button class="btn btn-danger" type="button">Excluir</button>
-                  </a>
+                  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
                 </td>
               </tr>
             </tbody>
@@ -142,15 +140,42 @@
 
     <!-- modal cadastrar produtos -->
     <div class="modal fade modal-slide-in-right" aria-hidden="true"
-          role="dialog" tabindex="-1" id="modal-delete">
+          role="dialog" tabindex="-1" id="cadastroProduto">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
+            <h4 class="modal-title">Novo Produto</h4>
             <button type="button" class="close" data-dismiss="modal" 
             aria-label="Close">
               <span aria-hidden="true">×</span>
             </button>
-            <h4 class="modal-title">Novo Produto</h4>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <label for="produto" class="form-label"><b>Produto</b></label><br>
+              <input type="text" class="form-control" required>
+              <label for="preco" class="form-label"><b>Preço</b></label><br>
+              <input type="text" class="form-control" required>
+              <label for="estoque" class="form-label"><b>Estoque</b></label><br>
+              <input type="text" class="form-control" required><br>
+              <button type="submit" class="btn btn-success form-control">Confirmar cadastro</button><br>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal cadastrar produtos -->
+    <!-- modal confirmar excluir produto -->
+    <div class="modal fade modal-slide-in-right" aria-hidden="true"
+          role="dialog" tabindex="-1" id="excluirProduto">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Excluir produto</h4>
+            <button type="button" class="close" data-dismiss="modal" 
+            aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
           </div>
           <div class="modal-body">
             <p>Confirme se deseja apagar o Produto</p>
@@ -162,7 +187,7 @@
         </div>
       </div>
     </div>
-    <!-- modal cadastrar produtos -->
+      <!-- modal confirmar excluir produto -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
 </html>
