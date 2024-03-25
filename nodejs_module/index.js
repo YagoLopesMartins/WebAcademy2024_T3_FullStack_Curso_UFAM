@@ -1,6 +1,8 @@
 const http = require('http')
 const fs = require('fs');
+require('dotenv').config();
 
+const PORT = process.env.PORT || 3333;
 // Recebe o diretorio quando o programa é executado ex.: $ node index.js ./diretorio/
 const diretorio = process.argv[2];
 
@@ -23,5 +25,5 @@ const server = http.createServer(function(req, res) {
     });
 });
 
-server.listen(3000);
+server.listen(PORT);
 
