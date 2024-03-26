@@ -2,6 +2,7 @@ const http = require('http')
 const fs = require('fs');
 const dotenv = require("dotenv");
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
+const utils = require('./utils');
 
 const PORT = process.env.PORT || 3333;
 // Recebe o diretorio quando o programa é executado ex.: $ node index.js ./diretorio/
@@ -19,7 +20,8 @@ const server = http.createServer(function(req, res) {
         }else{
             res.writeHead(200, { "Content-Type":"text/html;charset=utf-8"});
             arquivos.forEach(arquivo =>{
-                res.write(`${arquivo}<br>`);
+                console.log(`${arquivo}<br>`);
+                res.write(`${utils.createLink(arquivo)}`);
             });
             res.end();
         }
