@@ -1,0 +1,42 @@
+## Nome do Projeto
+
+CRUD de Lembretes
+
+## Descrição
+
+Este projeto é um exemplo simples de um CRUD (Create, Read, Update, Delete) de lembretes/todoList. Ele fornece operações básicas para gerenciar lembretes, incluindo adição, visualização, atualização e exclusão.
+
+## uncionalidades
+
+ - Adicionar um novo lembrete, incluindo titulo, dataCriação, DataLimte (prazo) e descrição.
+ - Visualizar a lista de todos os lembretes disponíveis.
+ - Atualizar as informações de um lembretes existente.
+ - Excluir um lembrete da lista.
+
+## Tecnologias Utilizadas
+
+HTML
+Typescript
+JavaScript
+
+## Instalação
+
+Clone este repositório para o seu ambiente local usando o seguinte comando:
+
+ - git clone url_projeto
+
+Acesse o diretório do projeto:
+
+cd projeto
+
+Instale as dependências do projeto:
+
+npm install -g typescript
+
+## Como Usar
+
+ - No terminal executar tsc .\todoListApp.ts
+ - Abrir o index.html
+ - Interagir com o prompt na tela do browser :)
+
+
