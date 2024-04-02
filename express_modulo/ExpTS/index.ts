@@ -1,8 +1,9 @@
 import express, {Request, Response} from "express";
+import validateEnv from "./src/utils/validateEnv";
 import dotenv from "dotenv";
 
-
-dotenv.config();
+dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
+validateEnv();
 
 const app = express()
 
