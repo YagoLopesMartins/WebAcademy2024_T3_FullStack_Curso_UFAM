@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "dotenv": "^16.4.5",
-    "express": "^4.19.1"
+    "express": "^4.19.1",
+    "morgan": "^1.10.0"
   },
   "name": "express_modulo",
   "version": "1.0.0",
@@ -20,6 +21,7 @@
   "description": "",
   "devDependencies": {
     "@types/express": "^4.17.21",
+    "@types/morgan": "^1.9.9",
     "@types/node": "^20.11.30",
     "@typescript-eslint/eslint-plugin": "^7.5.0",
     "@typescript-eslint/parser": "^7.5.0",
