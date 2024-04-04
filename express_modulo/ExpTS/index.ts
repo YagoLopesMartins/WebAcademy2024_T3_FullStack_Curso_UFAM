@@ -6,8 +6,25 @@ import { engine } from 'express-handlebars';
 const path = require('path')
 import router from './src/routes/router';
 
+import sass from 'node-sass-middleware';
+
+
 const app = express();
 app.use(router);
+
+app.use('/img', [ 
+  express.static(`${__dirname}/public/img`),
+  express.static(`${__dirname}/public/img2`)
+]);
+
+app.use('/css', express.static(`${__dirname}/public/css`));
+
+app.use(sass({
+  src: `${__dirname}/public/scss`,
+  dest: `${__dirname}/public/css`,
+  outputStyle: "compressed",
+  prefix: "/css", 
+}));
 
 // dotenv.config();
 dotenv.config({ path: `.env.${process.env.NODE_ENV}` });
