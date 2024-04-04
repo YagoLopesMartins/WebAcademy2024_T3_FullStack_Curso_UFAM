@@ -19,6 +19,11 @@ app.use('/img', [
 
 app.use('/css', express.static(`${__dirname}/public/css`));
 
+app.use('/js', [ 
+  express.static(`${__dirname}/public/js`),
+  express.static(`${__dirname}/public/node_modules/bootstrap/dist/js/`)
+]);
+
 app.use(sass({
   src: `${__dirname}/public/scss`,
   dest: `${__dirname}/public/css`,
