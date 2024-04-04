@@ -30,5 +30,19 @@ router.get('/hb3', (req, res) => {
         layout: false,
       });
 });
-
+router.get('/hb4', (req, res) => {
+  const technologies = [
+    { name: 'Express', type: 'Framework', poweredByNodejs: true },
+    { name: 'Laravel', type: 'Framework', poweredByNodejs: false },
+    { name: 'React', type: 'Library', poweredByNodejs: true },
+    { name: 'Handlebars', type: 'Engine View', poweredByNodejs: true },
+    { name: 'Django', type: 'Framework', poweredByNodejs: false },
+    { name: 'Docker', type: 'Virtualization', poweredByNodejs: false },
+    { name: 'Sequelize', type: 'ORM tool', poweredByNodejs: true },
+   ];
+    res.render('hb/hb4', {
+      technologies,
+      layout: false,
+    });
+});
 export default router;
