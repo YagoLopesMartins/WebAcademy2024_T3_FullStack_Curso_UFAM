@@ -4,11 +4,9 @@ import validateEnv from "./src/utils/validateEnv";
 import dotenv from "dotenv";
 import { engine } from 'express-handlebars';
 const path = require('path')
-
-import router from './routes/router';
+import router from './src/routes/router';
 
 const app = express();
-
 app.use(router);
 
 // dotenv.config();
@@ -18,13 +16,11 @@ validateEnv();
 app.engine("handlebars", engine());
 app.set("view engine", "handlebars");
 app.set("views", `${__dirname}/views`);
+app.engine("handlebars", engine({
+  helpers: require(`${__dirname}/views/helpers/helpers.ts`)
+}));
 
 const PORT = process.env.PORT || 3000;
-
-app.get('/', (req: Request, res: Response) => {
-    res.send("Hello World! :)")
-})
-
 
 app.use((req, res) => {
   res.statusCode = 404;
