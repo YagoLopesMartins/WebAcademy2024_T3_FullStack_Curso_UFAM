@@ -1,0 +1,21 @@
+<div class="container">
+        <div class="col-md-4 left-column">
+            <form action="/produto/update/{{produto.id}}" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label"><b>Nome</b></label><br>
+                        <input type="text" name="nome" class="form-control" value="{{produto.nome}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="preco" class="form-label"><b>Preço</b></label><br>
+                        <input type="number" name="preco" class="form-control" value="{{produto.preco}}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="estoque" class="form-label"><b>Estoque</b></label><br>
+                        <input type="number" name="estoque" class="form-control" value="{{produto.estoque}}">
+                    </div>
+                    <div class="mb-3">
+                    <input type="submit" class="btn btn-success form-control" value="Enviar">
+                    </div>
+            </form>
+        </div>
+</div>

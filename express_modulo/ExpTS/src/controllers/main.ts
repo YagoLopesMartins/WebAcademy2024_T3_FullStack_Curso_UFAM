@@ -1,6 +1,7 @@
-import { Request, Response } from 'express';
-const index = (req: Request, res: Response) => {
- res.end('Welcome to Web academy!');
+import { NextFunction, Request, Response } from 'express';
+const index = (req: Request, res: Response, next: NextFunction) => {
+//  res.end('Welcome to Web academy!');
+ res.render('formulario');
 };
 
 const hb1 = (req: Request, res:Response) => {

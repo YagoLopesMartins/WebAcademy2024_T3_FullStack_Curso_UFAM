@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 left-column">
+            <form action="/produto/create" method="POST">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label"><b>Nome</b></label><br>
+                        <input type="text" name="nome" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="preco" class="form-label"><b>Preço</b></label><br>
+                        <input type="number" name="preco" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="estoque" class="form-label"><b>Estoque</b></label><br>
+                        <input type="number" name="estoque" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                    <input type="submit" class="btn btn-success form-control" value="Enviar">
+                    </div>
+                </form>
+        </div>
+        <div class="col-md-8 right-column">
+                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-bordered table-condensed table-hover">
+                                <thead class="table-light"> 
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Produto</th>
+                                    <th scope="col">Preço</th>
+                                    <th scope="col">Estoque</th>
+                                    <th scope="col">Ações</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>Aro 19</td>
+                                    <td>R$ 2.045</td>
+                                    <td>102</td>
+                                    <td colspan="2">
+                                    <button class="btn btn-info" type="button">Editar</button>
+                                    <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#excluirProduto">Excluir</button>
+                                    </td>
+                                </tr>
+                                {{#each produtos}}
+                                    <tr>
+                                        <td>{{nome}}</td>
+                                        <td>{{preco}}</td>
+                                        <td>{{estoque}}</td>
+                                    </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+        </div>        
+    </div>
+</div>
