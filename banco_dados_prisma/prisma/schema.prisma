@@ -1,0 +1,77 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Subcategorias {
+  subcategorias_id        Int         @id @default(autoincrement())
+  subcategorias_descricao String      @db.VarChar(255)
+  Categorias              Categorias? @relation(fields: [categoriasCategoria_id], references: [categoria_id])
+  categoriasCategoria_id  Int?
+
+  @@map("subcategorias")
+}
+
+model Categorias {
+  categoria_id    Int             @id @default(autoincrement())
+  subcategoria_id Subcategorias[]
+
+  @@map("categorias")
+}
+
+model Produtos {
+  produto_id            Int      @id @default(autoincrement())
+  fabricante            String   @db.VarChar(255)
+  modelo                String   @db.VarChar(255)
+  preco                 Float
+  quantidade_disponivel Int
+  numero_serie          Int?     @unique
+  Compras               Compras? @relation(fields: [comprasCompra_id], references: [compra_id])
+  comprasCompra_id      Int?
+}
+
+model Compras {
+  compra_id                             Int               @id @default(autoincrement())
+  produtos_id                           Produtos[]
+  data_hora                             DateTime
+  desconto                              Float?
+  forma_pagamento                       String            @db.VarChar(255)
+  total                                 Float
+  ClienteFazCompra                      ClienteFazCompra? @relation(fields: [clienteFazCompraCliente_faz_compra_id], references: [cliente_faz_compra_id])
+  clienteFazCompraCliente_faz_compra_id Int?
+}
+
+model ClienteFazCompra {
+  cliente_faz_compra_id Int        @id @default(autoincrement())
+  compras_id            Compras[]
+  cliente_id            Clientes[]
+}
+
+model Clientes {
+  cliente_id                            Int               @id @default(autoincrement())
+  cpf                                   Int               @unique
+  ClienteFazCompra                      ClienteFazCompra? @relation(fields: [clienteFazCompraCliente_faz_compra_id], references: [cliente_faz_compra_id])
+  clienteFazCompraCliente_faz_compra_id Int?
+  endereco_id                           Endereco[]
+}
+
+model Endereco {
+  endereco_id Int    @id @default(autoincrement())
+  logradouro  String @db.VarChar(255)
+  bairro      String @db.VarChar(255)
+  numero      String @db.VarChar(255)
+  cep         String @db.VarChar(255)
+
+  Clientes           Clientes? @relation(fields: [clientesCliente_id], references: [cliente_id])
+  clientesCliente_id Int?
+}
