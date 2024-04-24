@@ -7,9 +7,9 @@ export const produtoSchema = Joi.object().keys({
 });
 
 const produto = {
-    nome: "teste",
-    preco: 4.5,
-    estoque: 10,
+    nome: "Motorola G6 ultra",
+    preco: 2.500,
+    estoque: 100,
 };
 
 const result = produtoSchema.validate(produto);
