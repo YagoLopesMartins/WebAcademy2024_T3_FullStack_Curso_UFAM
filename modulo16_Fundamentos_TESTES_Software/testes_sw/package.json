@@ -1,0 +1,21 @@
+{
+  "name": "testes_sw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": " node --watch src/service.js",
+    "test": "node --test test/",
+    "test:coverage": "node --test --experimental-test-coverage test/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "lokijs": "1.5.12"
+  }
+}
