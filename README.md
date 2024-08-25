@@ -9,9 +9,15 @@
 - Carga horária: 336 horas (228h conteúdos teórico e prático e 108h hands-on)
 
 ## Links de deploy
-- Módulo 01 (HTML): https://portifolio.arraialofertas.com/html5/01/ https://portifolio.arraialofertas.com/html5/02/ 
-- Módulo 02 (CSS): https://portifolio.arraialofertas.com/css/02/ https://portifolio.arraialofertas.com/css/03/ 
-- Módulo 03 (JAVASCRIPT): https://portifolio.arraialofertas.com/js/01/ https://portifolio.arraialofertas.com/js/02/
+- Módulo 01 (HTML):
+  - https://portifolio.arraialofertas.com/html5/01/
+  - https://portifolio.arraialofertas.com/html5/02/ 
+- Módulo 02 (CSS):
+  - https://portifolio.arraialofertas.com/css/02/
+  - https://portifolio.arraialofertas.com/css/03/ 
+- Módulo 03 (JAVASCRIPT):
+  - https://portifolio.arraialofertas.com/js/01/
+  - https://portifolio.arraialofertas.com/js/02/
 - Módulo 04: 
 - Módulo 05: 
 - Módulo 06: 
