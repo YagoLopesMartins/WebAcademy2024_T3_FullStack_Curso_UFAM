@@ -6,31 +6,58 @@
     <title>Loja de games</title>
 </head>
 <body>
+    <h4>Login</h4>
+
+    <form action="">
+        <input type="text" name="email" id="email" placeholder="e-mail"><br>
+        <input type="text" name="password" id="password" placeholder="***********************"><br>
+        <button type="button" onclick="login()">Logar</button>
+    </form>
+
     <h4>Lista de games</h4>
     <ul id="games"></ul>
     <hr>
     <h4>Novo game</h4>
-    <form action="">
+ 
         <input type="text" name="title" id="title" placeholder="Titulo"><br>
         <input type="number" name="year" id="year" placeholder="Ano"><br>
         <input type="number" name="price" id="price" placeholder="Preço"><br>
         <button type="button" onclick="createGame()">Criar</button>
-    </form>
+
 
     <h4>Editar game</h4>
-    <form action="">
         <input type="text" name="idEdit" id="idEdit" placeholder="ID" readonly><br>
         <input type="text" name="titleEdit" id="titleEdit" placeholder="Titulo"><br>
         <input type="number" name="yearEdit" id="yearEdit" placeholder="Ano"><br>
         <input type="number" name="priceEdit" id="priceEdit" placeholder="Preço"><br>
         <button type="button" onclick="updateGame()">Editar</button>
-    </form>
-
-    
     
 </body>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
+
+        var axiosConfig = {
+            headers: {
+                Authorization: "Bearer "+ localStorage.getItem('token')
+            }
+        }
+
+        function login(){
+            var emailField = document.getElementById("email").value
+            var passwordField = document.getElementById("password").value
+            console.log(`${emailField} - ${passwordField}`)
+
+            axios.post("http://localhost:3000/auth", {
+                emailField,
+                passwordField
+            }).then(res => {
+                var token = res.data.token
+                localStorage.setItem("token", token)
+                alert(token)
+            }).catch(err =>{
+                alert(err)
+            })
+        }
         
         function deleteGame (listItem) {
             var id = listItem.getAttribute("data-id")
@@ -98,7 +125,7 @@
         }
 
 
-        axios.get("http://localhost:3000/games")
+        axios.get("http://localhost:3000/games", axiosConfig)
         .then(response => {
             var games = response.data
             var list = document.getElementById("games")
