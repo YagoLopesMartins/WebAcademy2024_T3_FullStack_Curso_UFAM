@@ -1,8 +1,13 @@
 const express = require("express")
 
 const app = express()
+const  cors = require("cors")
 
 const PORT = process.env.PORT || 3000;
+
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+app.use(cors())
 
 var DB = {
     games: [
@@ -14,15 +19,15 @@ var DB = {
         },
         {
             id: 2,
-            title: "Call of duty MW",
-            year: 2019,
-            price: 60
+            title: "CS:GO",
+            year: 2020,
+            price: 70
         },
         {
             id: 3,
-            title: "Call of duty MW",
-            year: 2019,
-            price: 60
+            title: "GTA vice city",
+            year: 2021,
+            price: 80
         }
     ]
 }
