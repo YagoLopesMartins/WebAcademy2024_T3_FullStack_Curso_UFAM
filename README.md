@@ -9,6 +9,7 @@
 - Carga horária: 336 horas (228h conteúdos teórico e prático e 108h hands-on)
 
 ## Links de deploy
+
 - Módulo 01 (HTML):
   - https://portifolio.arraialofertas.com/html5/01/
   - https://portifolio.arraialofertas.com/html5/02/ 
