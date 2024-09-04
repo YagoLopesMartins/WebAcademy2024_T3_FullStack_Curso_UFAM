@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo04_Controle_Versao_GIT/lab01" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo07_fundamentos_NODEJS/node1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo16_Fundamentos_TESTES_Software_Jest/myapp_test" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/modulo16_Fundamentos_TESTES_Software_Jest/wa-loja-testes" vcs="Git" />
+  </component>
+</project>
